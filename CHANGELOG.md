@@ -20,6 +20,9 @@
   - Cobre fluxos E2E de API para lista, criacao com sucesso, conflito por email, atualizacao inexistente e exclusao.
 - `src/test/java/com/example/educationalqualityproject/e2e/TeacherApiE2ETest.java`
   - Cobre fluxos E2E de API para lista, criacao com sucesso, conflito por email, atualizacao inexistente e exclusao.
+- `src/test/java/com/example/educationalqualityproject/e2e/StudentApiE2ETest.java`
+  - Adicionado 1 teste E2E de desafio (`challengeTestShouldFailOnPurpose`) quebrado propositalmente, para o aluno corrigir a expectativa de status HTTP.
+  - Comando para executar somente o teste quebrado: `mvn -q -Dtest=StudentApiE2ETest#challengeTestShouldFailOnPurpose test`
 
 ### Ajustes Tecnicos
 - `pom.xml`

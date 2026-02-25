@@ -28,6 +28,33 @@ Os testes estão organizados em:
 - `src/test/java/com/example/educationalqualityproject/e2e`
   - testes end-to-end da API com `MockMvc` (`StudentApiE2ETest`, `TeacherApiE2ETest`)
 
+## 2.1 Diagramas UML de sequencia (imagens)
+
+Fonte textual completa:
+- `uml-sequencia.md`
+
+Imagens renderizadas:
+
+### TeacherServiceTest
+
+![TeacherServiceTest](docs/uml/teacher-service-test.svg)
+
+### StudentControllerTest
+
+![StudentControllerTest](docs/uml/student-controller-test.svg)
+
+### TeacherControllerTest
+
+![TeacherControllerTest](docs/uml/teacher-controller-test.svg)
+
+### StudentApiE2ETest
+
+![StudentApiE2ETest](docs/uml/student-api-e2e-test.svg)
+
+### TeacherApiE2ETest
+
+![TeacherApiE2ETest](docs/uml/teacher-api-e2e-test.svg)
+
 ## 3. Executar apenas os testes
 
 Para rodar somente a suíte de testes:
@@ -136,4 +163,34 @@ mvn -Dtest=StudentApiE2ETest test
 
 # Executar um método específico
 mvn -Dtest=StudentApiE2ETest#shouldCreateStudent test
+```
+
+## 10. Alternativa com PlantUML (site)
+
+Tambem e possivel gerar os diagramas pelo site do PlantUML.
+
+Passo a passo:
+
+1. Acesse: `https://www.plantuml.com/plantuml/uml/`
+2. Escreva ou cole o diagrama no formato PlantUML, entre `@startuml` e `@enduml`.
+3. Clique em `Submit` para renderizar.
+4. Baixe a imagem gerada (PNG/SVG) pelo proprio viewer.
+5. Salve em `docs/uml/` e referencie no `README.md` com `![nome](docs/uml/arquivo.svg)`.
+
+Exemplo minimo em PlantUML:
+
+```plantuml
+@startuml
+actor Teste
+participant Controller
+participant Service
+database Repository
+
+Teste -> Controller: GET /api/students
+Controller -> Service: getAllStudents()
+Service -> Repository: findAll()
+Repository --> Service: lista
+Service --> Controller: lista
+Controller --> Teste: 200 OK
+@enduml
 ```
