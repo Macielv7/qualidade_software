@@ -1,5 +1,39 @@
 # CHANGELOG
 
+## [0.3.0] - 2026-03-15
+
+### Nova Atividade: Gestão de Bugs
+
+#### Objetivo
+Ensinar os alunos a identificar, documentar e reportar bugs de forma profissional usando GitHub Issues.
+
+#### Descrição da Atividade
+Um bug foi introduzido propositalmente no código da aplicação. O problema está localizado em um **Service** e faz com que a aplicação falhe ao iniciar, mesmo que **todos os testes passem**.
+
+Os alunos deverão:
+1. Identificar que a aplicação não inicia corretamente
+2. Investigar a causa raiz do problema
+3. Criar uma **Issue no GitHub** documentando corretamente o bug, incluindo:
+   - Título descritivo
+   - Descrição do problema
+   - Passos para reproduzir
+   - Comportamento esperado vs. comportamento atual
+   - Logs de erro relevantes
+   - Screenshots (se aplicável)
+
+#### Competências Desenvolvidas
+- Debugging de aplicações Spring Boot
+- Análise de logs e stack traces
+- Identificação de bugs em tempo de inicialização (startup)
+- Documentação profissional de bugs
+- Uso adequado do GitHub Issues para rastreamento de problemas
+
+#### Arquivos Relacionados
+- Service com bug: `src/main/java/com/example/educationalqualityproject/service/`
+- Issue template: `.github/ISSUE_TEMPLATE/bug_report.md`
+
+---
+
 ## [0.2.0] - 2026-02-25
 
 ### Atualizado
