@@ -127,13 +127,13 @@ class StudentApiE2ETest {
     }
 
     @Test
-    @DisplayName("E2E API Student - DESAFIO: GET /api/students deveria retornar 201 (quebrado propositalmente)")
+    @DisplayName("E2E API Student - GET /api/students retorna 200")
     void challengeTestShouldFailOnPurpose() throws Exception {
         Student student = new Student("Lia", "lia@escola.edu", "R777");
         student.setId("s777");
         when(studentRepository.findAll()).thenReturn(List.of(student));
 
         mockMvc.perform(get("/api/students"))
-                .andExpect(status().isCreated());
+                .andExpect(status().isOk());
     }
 }
