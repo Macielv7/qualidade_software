@@ -116,7 +116,7 @@ class StudentApiE2ETest {
     @Test
     @DisplayName("E2E API Student - DELETE /api/students/{id} remove estudante")
     void shouldDeleteStudent() throws Exception {
-        Student student = new Student("Joao", "joao@escola.edu", "R001");
+        Student student = new Student("Maciel", "maciel@escola.edu", "R001");
         student.setId("s1");
         when(studentRepository.findById("s1")).thenReturn(Optional.of(student));
 
